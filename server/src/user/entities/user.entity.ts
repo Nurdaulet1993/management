@@ -10,9 +10,9 @@ export class UserEntity {
   @Column({ length: 20 })
   name: string;
 
-  @Column({ length: 30 })
+  @Column({ length: 30, unique: true })
   email: string;
 
-  @Column({ select: false })
+  @Column({ select: true })
   password: string;
 }
