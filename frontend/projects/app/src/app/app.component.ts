@@ -1,7 +1,8 @@
-import { Component, inject } from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AsyncPipe } from '@angular/common';
+import { UserApiService } from 'core';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,16 @@ import { AsyncPipe } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  private http = inject(HttpClient);
-  title$ = this.http.get<{ text: string }>('http://localhost:3000');
+export class AppComponent implements OnInit {
+  private userApiService = inject(UserApiService);
+
+  ngOnInit(): void {
+    this.userApiService.getUsers()
+      .subscribe(users => {
+        console.log(users)
+      })
+  }
+
+
+
 }
