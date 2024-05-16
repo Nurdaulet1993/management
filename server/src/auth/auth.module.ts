@@ -14,22 +14,22 @@ import {LocalAuthGuard} from './guards/local-auth.guard';
   imports: [
     UserModule,
     PassportModule,
-    // JwtModule.registerAsync({
-    //   imports: [ConfigModule],
-    //   inject: [ConfigService],
-    //   useFactory: async (configService: ConfigService) => ({
-    //     secret: configService.get('JWT_SECRET'),
-    //     signOptions: {
-    //       expiresIn: '1h'
-    //     }
-    //   })
-    // })
+    JwtModule.registerAsync({
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: async (configService: ConfigService) => ({
+        secret: configService.get('JWT_SECRET'),
+        signOptions: {
+          expiresIn: '1h'
+        }
+      })
+    })
   ],
   controllers: [AuthController],
   providers: [
     AuthService,
     LocalStrategy,
-    // JwtStrategy,
+    JwtStrategy,
   ],
   exports: []
 })
