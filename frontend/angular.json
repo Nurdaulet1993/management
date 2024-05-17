@@ -32,6 +32,11 @@
             "styles": [
               "projects/app/src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "dist/ui-library/styles"
+              ]
+            },
             "scripts": []
           },
           "configurations": {

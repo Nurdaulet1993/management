@@ -8,7 +8,8 @@
         "./dist/core/*"
       ],
       "ui-library": [
-        "./dist/ui-library"
+        "./dist/ui-library",
+        "./dist/ui-library/*"
       ]
     },
     "outDir": "./dist/out-tsc",
