@@ -1,7 +1,9 @@
-import { Injectable } from '@nestjs/common';
+import { BadRequestException, Injectable } from '@nestjs/common';
 import { UserService } from '../user/user.service';
 import { JwtService } from '@nestjs/jwt';
-import {UserEntity} from '../user/entities/user.entity';
+import { UserEntity } from '../user/entities/user.entity';
+import { CreateUserDto } from '../user/dto/create-user.dto';
+import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class AuthService {
@@ -12,7 +14,7 @@ export class AuthService {
 
   async validateUser(email: string, password: string): Promise<any> {
     const user = await this.userService.findOneByEmail(email);
-    if (user && user.password === password) {
+    if (user && await bcrypt.compare(password, user.password)) {
       const { password, ...result } = user;
       return result;
     }
@@ -24,5 +26,11 @@ export class AuthService {
     return {
       access_token: this.jwtService.sign(payload),
     };
+  }
+
+  async signUp(createUserDto: CreateUserDto) {
+    const user: UserEntity = await this.userService.findOneByEmail(createUserDto.email);
+    if (user) throw new BadRequestException('Email in use!');
+    return this.userService.create(createUserDto);
   }
 }
