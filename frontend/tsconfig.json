@@ -3,7 +3,13 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "core": ["./dist/core", "./dist/core/*"]
+      "core": [
+        "./dist/core",
+        "./dist/core/*"
+      ],
+      "ui-library": [
+        "./dist/ui-library"
+      ]
     },
     "outDir": "./dist/out-tsc",
     "strict": true,
