@@ -1,14 +1,24 @@
-<form class="card mx-auto shadow border-0">
+<form class="card mx-auto shadow border-0" [formGroup]="form" (ngSubmit)="signIn()">
   <div class="card-body">
     <h1 class="text-primary">Sign In</h1>
     <p class="lead mb-4">Nice to see you! Please log in with your account.</p>
     <div class="form-floating mb-3">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">Email address</label>
+      <input type="email"
+             class="form-control"
+             id="email"
+             placeholder="name@example.com"
+             formControlName="email"
+      >
+      <label for="email">Email address</label>
     </div>
     <div class="form-floating mb-3">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-      <label for="floatingPassword">Password</label>
+      <input type="password"
+             class="form-control"
+             id="password"
+             placeholder="Password"
+             formControlName="password"
+      >
+      <label for="password">Password</label>
     </div>
     <button class="btn btn-primary w-100">Sign In</button>
   </div>
