@@ -1,13 +1,14 @@
 import { Body, Controller, Post, UseGuards, Request, Get } from '@nestjs/common';
-import { AuthService } from './auth.service';
-import { LoginDto } from './dto/login.dto';
+import { AuthService } from '../auth.service';
+import { LoginDto } from '../dto/login.dto';
 import { AuthGuard } from '@nestjs/passport';
-import { LocalAuthGuard } from './guards/local-auth.guard';
-import { JwtAuthGuard } from './guards/jwt.guard';
-import { CreateUserDto } from '../user/dto/create-user.dto';
-import {GetUser} from './get-user.decorator';
-import {UserEntity} from '../user/entities/user.entity';
-import {Public} from './public.decorator';
+import { LocalAuthGuard } from '../guards/local-auth.guard';
+import { JwtAuthGuard } from '../guards/jwt.guard';
+import { CreateUserDto } from '../../user/dto/create-user.dto';
+import { GetUser } from '../get-user.decorator';
+import { UserEntity } from '../../user/entities/user.entity';
+import { Public } from '../public.decorator';
+import {RegisterDto} from '../dto/register.dto';
 
 @Controller('auth')
 export class AuthController {
@@ -15,8 +16,8 @@ export class AuthController {
 
   @Public()
   @Post('sign-up')
-  signUp(@Body() body: CreateUserDto) {
-    return this.authService.signUp(body);
+  signUp(@Body() body: RegisterDto) {
+    return this.authService.signUp(body, false);
   }
 
   @Public()

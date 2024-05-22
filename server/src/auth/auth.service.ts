@@ -4,6 +4,7 @@ import { JwtService } from '@nestjs/jwt';
 import { UserEntity } from '../user/entities/user.entity';
 import { CreateUserDto } from '../user/dto/create-user.dto';
 import * as bcrypt from 'bcrypt';
+import {RegisterDto} from './dto/register.dto';
 
 @Injectable()
 export class AuthService {
@@ -29,9 +30,12 @@ export class AuthService {
     };
   }
 
-  async signUp(createUserDto: CreateUserDto) {
+  async signUp(createUserDto: RegisterDto, admin: boolean) {
     const user: UserEntity = await this.userService.findOneByEmail(createUserDto.email);
     if (user) throw new BadRequestException('Email in use!');
-    return this.userService.create(createUserDto);
+    return this.userService.create({
+      ...createUserDto,
+      type: admin ? 'client' : 'customer'
+    });
   }
 }

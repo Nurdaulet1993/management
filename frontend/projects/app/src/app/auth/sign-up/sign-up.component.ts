@@ -27,10 +27,8 @@ export class SignUpComponent {
   });
 
   signUp() {
-
     if (this.form.invalid) return;
     const { email, password, firstName, lastName } = this.form.getRawValue();
-    console.log('SIGN UP')
     this.authService.signUp(email, password, firstName, lastName)
       .pipe(switchMap(res => this.authService.signIn(email, password))) // TODO catch error on sign up
       .subscribe(() => this.router.navigate(['/']))
