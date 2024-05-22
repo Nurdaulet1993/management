@@ -1,8 +1,18 @@
-import { ApplicationConfig } from '@angular/core';
+import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { provideRouter } from '@angular/router';
-
+import { environment } from '../environments/environment';
 import { routes } from './app.routes';
 
+import { CoreModule } from 'core';
+
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes)]
+  providers: [
+    provideRouter(routes),
+    importProvidersFrom([
+      CoreModule.forRoot({
+        isAdmin: true,
+        apiUrl: environment.apiUrl
+      })
+    ])
+  ]
 };
