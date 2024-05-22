@@ -35,4 +35,9 @@ export class AuthService {
         tap(user => this.currentUser.set(user))
       )
   }
+
+  logout() {
+    this.jwtService.removeToken();
+    this.currentUser.set(null);
+  }
 }
