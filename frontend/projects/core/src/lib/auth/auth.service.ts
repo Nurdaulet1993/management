@@ -1,7 +1,7 @@
 import { inject, Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CONFIG } from '../config/config.token';
-import { Observable, tap } from 'rxjs';
+import { catchError, EMPTY, Observable, shareReplay, tap } from 'rxjs';
 import { AuthResponse, CurrentUser } from './auth.model';
 import { JwtService } from '../services';
 
@@ -32,7 +32,12 @@ export class AuthService {
   getCurrentUser(): Observable<CurrentUser> {
     return this.http.get<CurrentUser>(`${this.endpoint}/user`)
       .pipe(
-        tap(user => this.currentUser.set(user))
+        tap(user => this.currentUser.set(user)),
+        catchError(() => {
+          this.logout();
+          return EMPTY;
+        }),
+        shareReplay(1)
       )
   }
 

@@ -25,7 +25,7 @@ export class CoreModule {
         {
           provide: APP_INITIALIZER,
           useFactory: (authService: AuthService, jwtService: JwtService) => {
-            return () => (jwtService.getToken() ? authService.getCurrentUser(): EMPTY)
+            return () => (jwtService.getToken() ? authService.getCurrentUser() : EMPTY)
           },
           multi: true,
           deps: [AuthService, JwtService]
