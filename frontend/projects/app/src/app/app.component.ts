@@ -1,4 +1,4 @@
-import {Component, inject, OnInit} from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { AsyncPipe } from '@angular/common';
@@ -20,7 +20,4 @@ export class AppComponent implements OnInit {
         console.log(users)
       })
   }
-
-
-
 }
