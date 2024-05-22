@@ -22,13 +22,16 @@ export class SignUpComponent {
   form = this.fb.nonNullable.group({
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.minLength(6)]],
-    name: ['', Validators.required]
+    firstName: ['', Validators.required],
+    lastName: ['', Validators.required],
   });
 
   signUp() {
+
     if (this.form.invalid) return;
-    const { email, password, name } = this.form.getRawValue();
-    this.authService.signUp(email, password, name)
+    const { email, password, firstName, lastName } = this.form.getRawValue();
+    console.log('SIGN UP')
+    this.authService.signUp(email, password, firstName, lastName)
       .pipe(switchMap(res => this.authService.signIn(email, password))) // TODO catch error on sign up
       .subscribe(() => this.router.navigate(['/']))
   }

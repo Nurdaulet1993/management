@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, inject, WritableSignal} from '@angular/core';
+import {AuthService, CurrentUser} from 'core';
 
 @Component({
   selector: 'app-home',
@@ -8,5 +9,6 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-
+  private authService = inject(AuthService);
+  user: WritableSignal<CurrentUser | null>  = this.authService.currentUser;
 }

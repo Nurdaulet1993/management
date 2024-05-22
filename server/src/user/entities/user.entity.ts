@@ -9,7 +9,10 @@ export class UserEntity {
   id: number;
 
   @Column({ length: 20 })
-  name: string;
+  firstName: string;
+
+  @Column({ length: 20 })
+  lastName: string;
 
   @Column({ length: 30, unique: true })
   email: string;
@@ -20,5 +23,9 @@ export class UserEntity {
   @BeforeInsert()
   async hashPassword() {
     this.password = await bcrypt.hash(this.password, 12);
+  }
+
+  get displayName(): string {
+    return `${this.firstName} ${this.lastName[0]}`
   }
 }

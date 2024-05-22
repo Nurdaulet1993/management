@@ -11,8 +11,8 @@ export class UserService {
     @Inject('USER_REPOSITORY') private userRepo: Repository<UserEntity>
   ) {}
 
-  create({ name, email, password }: CreateUserDto): Observable<Partial<UserEntity>> {
-    const user = this.userRepo.create({ name, email, password });
+  create({ firstName, lastName, email, password }: CreateUserDto): Observable<Partial<UserEntity>> {
+    const user = this.userRepo.create({ firstName, lastName, email, password });
     return from(this.userRepo.save(user))
       .pipe(
         map(({ password, ...props}) => props)
