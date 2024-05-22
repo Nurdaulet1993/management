@@ -1,8 +1,11 @@
-import { Body, Controller, Post, Request, UseGuards } from '@nestjs/common';
+import { Body, Controller, Get, Post, Request, UseGuards } from '@nestjs/common';
 import { Public } from '../public.decorator';
 import { AuthService } from '../auth.service';
 import { RegisterDto } from '../dto/register.dto';
 import { LocalAuthGuard } from '../guards/local-auth.guard';
+import { JwtAuthGuard} from '../guards/jwt.guard';
+import { GetUser } from '../get-user.decorator';
+import { UserEntity } from '../../user/entities/user.entity';
 
 @Controller('admin/auth')
 export class AuthAdminController {
@@ -24,4 +27,9 @@ export class AuthAdminController {
     return this.authService.login(req.user)
   }
 
+  @UseGuards(JwtAuthGuard)
+  @Get('user')
+  getProfile(@GetUser() user: Omit<UserEntity, "password">) {
+    return user;
+  }
 }
