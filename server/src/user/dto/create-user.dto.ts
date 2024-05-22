@@ -12,7 +12,7 @@ export class CreateUserDto {
 
   @IsString()
   @IsNotEmpty()
-  @IsIn(['client', 'customer'])
+  @IsIn(['seller', 'customer'])
   type: UserType;
 
   @IsEmail()

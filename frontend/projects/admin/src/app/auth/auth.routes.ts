@@ -14,6 +14,6 @@ export const AUTH_ROUTES: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'sign-up'
+    redirectTo: 'sign-in'
   }
 ]
