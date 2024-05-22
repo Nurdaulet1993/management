@@ -1,7 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from 'core';
 import { switchMap } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -11,10 +12,12 @@ import { switchMap } from 'rxjs';
     ReactiveFormsModule
   ],
   templateUrl: './sign-up.component.html',
-  styleUrl: './sign-up.component.scss'
+  styleUrl: './sign-up.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SignUpComponent {
   private authService = inject(AuthService);
+  private router = inject(Router);
   private fb = inject(FormBuilder);
   form = this.fb.nonNullable.group({
     email: ['', [Validators.required, Validators.email]],
@@ -27,8 +30,6 @@ export class SignUpComponent {
     const { email, password, name } = this.form.getRawValue();
     this.authService.signUp(email, password, name)
       .pipe(switchMap(res => this.authService.signIn(email, password))) // TODO catch error on sign up
-      .subscribe((res) => {
-        localStorage.setItem('accessToken', res.access_token);
-      })
+      .subscribe(() => this.router.navigate(['/']))
   }
 }

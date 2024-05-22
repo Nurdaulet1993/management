@@ -1,6 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { AuthResponse, AuthService, JwtService } from 'core';
+import { AuthService } from 'core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-in',
@@ -9,11 +10,12 @@ import { AuthResponse, AuthService, JwtService } from 'core';
     ReactiveFormsModule
   ],
   templateUrl: './sign-in.component.html',
-  styleUrl: './sign-in.component.scss'
+  styleUrl: './sign-in.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SignInComponent {
   private authService = inject(AuthService);
-  private jwtService = inject(JwtService);
+  private router = inject(Router);
   private fb = inject(FormBuilder);
   form = this.fb.nonNullable.group({
     email: ['user123@gmail.com', [Validators.required, Validators.email]],
@@ -24,7 +26,9 @@ export class SignInComponent {
     if (this.form.invalid) return;
     const { email, password } = this.form.getRawValue();
     this.authService.signIn(email, password)
-      .subscribe((res: AuthResponse) => this.jwtService.setToken(res.access_token))
+      .subscribe(() => {
+        this.router.navigate(['/'])
+      })
   }
 
 }
