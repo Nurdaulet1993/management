@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { LayoutComponent } from './layout/layout.component';
 
 export const routes: Routes = [
   {
@@ -7,11 +8,17 @@ export const routes: Routes = [
   },
   {
     path: '',
-    loadComponent: () => import('./dashboard/dashboard.component').then(c => c.DashboardComponent)
+    component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        loadComponent: () => import('./dashboard/dashboard.component').then(c => c.DashboardComponent)
+      },
+      {
+        path: '**',
+        pathMatch: 'full',
+        redirectTo: ''
+      }
+    ]
   },
-  {
-    path: '**',
-    pathMatch: 'full',
-    redirectTo: ''
-  }
 ];
