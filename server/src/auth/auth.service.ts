@@ -35,7 +35,7 @@ export class AuthService {
     if (user) throw new BadRequestException('Email in use!');
     return this.userService.create({
       ...createUserDto,
-      type: admin ? 'client' : 'customer'
+      type: admin ? 'seller' : 'customer'
     });
   }
 }
