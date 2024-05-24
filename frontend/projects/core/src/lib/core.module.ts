@@ -1,14 +1,15 @@
-import {APP_INITIALIZER, ModuleWithProviders, NgModule} from '@angular/core';
+import { APP_INITIALIZER, ModuleWithProviders, NgModule } from '@angular/core';
 import { Config } from './config/config.model';
 import { CONFIG } from './config/config.token';
-import { HttpClientModule } from '@angular/common/http';
-import {AuthService} from './auth/auth.service';
-import {JwtService} from './services';
-import {EMPTY} from 'rxjs';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { AuthService } from './auth/auth.service';
+import { JwtService } from './services';
+import { EMPTY } from 'rxjs';
 
 @NgModule({
-  imports: [HttpClientModule],
-  exports: [HttpClientModule]
+  exports: [],
+  imports: [],
+  providers: [provideHttpClient(withInterceptorsFromDi())]
 })
 export class CoreModule {
   static forRoot(config: Config = { apiUrl: 'http://localhost:3000/api', isAdmin: false }): ModuleWithProviders<CoreModule> {
