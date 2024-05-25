@@ -1,6 +1,15 @@
 @use "./scss/variables" as v;
 
-main {
-  margin-left: v.$sidebar-width;
-  height: 1500px;
+:host(.open) {
+  main {
+    margin-left: v.$sidebar-width;
+  }
 }
+
+main {
+  margin-left: v.$sidebar-width-sm;
+  height: 1500px;
+  transition: v.$layout-transition;
+}
+
+

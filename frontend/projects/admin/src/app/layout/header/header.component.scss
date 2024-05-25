@@ -3,6 +3,13 @@
 .header {
   position: sticky;
   top: 0;
-  margin-left: v.$sidebar-width;
+  margin-left: v.$sidebar-width-sm;
   z-index: 1000;
+  transition: v.$layout-transition;
+}
+
+:host-context(.open) {
+  .header {
+    margin-left: v.$sidebar-width;
+  }
 }

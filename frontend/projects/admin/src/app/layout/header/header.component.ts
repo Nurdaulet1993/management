@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LayoutService } from '../layout.service';
 
 @Component({
   selector: 'app-header',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  private layoutService = inject(LayoutService);
+
+  toggleSidebar() {
+    this.layoutService.toggleSidebar();
+  }
+}

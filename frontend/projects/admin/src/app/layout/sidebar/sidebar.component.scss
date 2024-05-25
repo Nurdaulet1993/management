@@ -1,10 +1,17 @@
 @use "../scss/variables" as v;
 
 .sidebar {
-  width: v.$sidebar-width;
+  width: v.$sidebar-width-sm;
   background-color: var(--bs-white);
   position: fixed;
   top: 0;
   bottom: 0;
   z-index: 1000;
+  transition: v.$layout-transition;
+}
+
+:host-context(.open) {
+  .sidebar {
+    width: v.$sidebar-width;
+  }
 }

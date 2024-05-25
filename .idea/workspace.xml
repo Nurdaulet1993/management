@@ -4,22 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0729a86c-2f93-41ee-bb13-6eb0b146992e" name="Changes" comment="Fix environment">
+    <list default="true" id="0729a86c-2f93-41ee-bb13-6eb0b146992e" name="Changes" comment="Layout start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/header/header.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/header/header.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/header/header.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/header/header.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/layout.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/layout.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/layout.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/layout.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/layout.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/sidebar/sidebar.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/sidebar/sidebar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/scss/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/sidebar/sidebar.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/sidebar/sidebar.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/header/header.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/header/header.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/layout.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/layout.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/layout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/layout.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/scss/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/sidebar/sidebar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/sidebar/sidebar.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/sidebar/sidebar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/sidebar/sidebar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +150,23 @@
       <option name="project" value="LOCAL" />
       <updated>1716586420952</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Layout start">
+      <option name="closed" value="true" />
+      <created>1716595572282</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716595572282</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Layout start">
+      <option name="closed" value="true" />
+      <created>1716595577382</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1716595577382</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,7 +178,8 @@
     <MESSAGE value="auth" />
     <MESSAGE value="Upgrade admin application" />
     <MESSAGE value="Fix environment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix environment" />
+    <MESSAGE value="Layout start" />
+    <option name="LAST_COMMIT_MESSAGE" value="Layout start" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
