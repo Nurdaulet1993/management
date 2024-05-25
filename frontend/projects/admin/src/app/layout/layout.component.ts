@@ -1,9 +1,9 @@
-import {Component, inject, signal} from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { RouterOutlet} from '@angular/router';
 
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import {LayoutService} from './layout.service';
+import { LayoutService } from './layout.service';
 
 @Component({
   selector: 'app-layout',
@@ -17,7 +17,8 @@ import {LayoutService} from './layout.service';
   styleUrl: './layout.component.scss',
   host: {
     '[class.open]': 'sidebarOpen()'
-  }
+  },
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LayoutComponent {
   private layoutService = inject(LayoutService);
