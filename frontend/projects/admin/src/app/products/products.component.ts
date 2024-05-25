@@ -14,7 +14,7 @@ import { JsonPipe } from '@angular/common';
 })
 export class ProductsComponent {
   private productService = inject(ProductService);
-  products = toSignal(this.productService.getProducts({}));
+  products = toSignal(this.productService.getProducts({ limit: 3, page: 2 }));
 
   product: Omit<Product, 'id'> = {
     title: 'Iphone',
