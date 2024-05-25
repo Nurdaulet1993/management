@@ -11,6 +11,8 @@ export class ProductsService {
     @Inject('PRODUCT_REPOSITORY') private productRepo: Repository<ProductEntity>
   ) {}
   create(createProductDto: CreateProductDto, user: UserEntity) {
+    console.log(user);
+    console.log(createProductDto);
     const product = this.productRepo.create({
       title: createProductDto.title,
       description: createProductDto.description,

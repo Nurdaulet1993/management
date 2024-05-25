@@ -6,15 +6,15 @@ import { JwtAuthGuard } from '../auth/guards/jwt.guard';
 import { GetUser } from '../auth/get-user.decorator';
 import { UserEntity } from '../user/entities/user.entity';
 
-@Controller('products')
+@Controller('admin/products')
 export class ProductsController {
   constructor(private productsService: ProductsService) {}
 
   @UseGuards(JwtAuthGuard)
   @Post()
   create(
+    @GetUser() user: UserEntity,
     @Body() createProductDto: CreateProductDto,
-    @GetUser() user: UserEntity
   ) {
     return this.productsService.create(createProductDto, user);
   }

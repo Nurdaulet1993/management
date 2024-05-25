@@ -11,3 +11,7 @@ export * from './lib/auth/auth.interceptor';
 
 // Services
 export * from './lib/services';
+
+// Product
+export * from './lib/product/product.model';
+export * from './lib/product/product.service';
