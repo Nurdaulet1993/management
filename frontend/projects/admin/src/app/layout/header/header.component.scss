@@ -6,6 +6,9 @@
   margin-left: v.$sidebar-width-sm;
   z-index: 1000;
   transition: v.$layout-transition;
+  min-height: v.$header-height;
+  display: flex;
+  align-items: center;
 }
 
 :host-context(.open) {
