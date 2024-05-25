@@ -5,6 +5,7 @@ import { UserModule } from './user/user.module';
 import * as process from 'process';
 import {APP_GUARD} from '@nestjs/core';
 import {JwtAuthGuard} from './auth/guards/jwt.guard';
+import { ProductsModule } from './products/products.module';
 
 @Module({
   imports: [
@@ -13,7 +14,8 @@ import {JwtAuthGuard} from './auth/guards/jwt.guard';
       envFilePath: `.env.${process.env.NODE_ENV}`
     }),
     AuthModule,
-    UserModule
+    UserModule,
+    ProductsModule
   ],
   providers: [
     {
