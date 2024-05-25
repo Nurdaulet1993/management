@@ -1,4 +1,6 @@
-:host {
-  display: block;
+@use "./scss/variables" as v;
+
+main {
+  margin-left: v.$sidebar-width;
   height: 1500px;
 }
