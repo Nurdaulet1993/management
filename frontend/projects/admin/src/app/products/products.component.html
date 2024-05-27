@@ -48,15 +48,11 @@
       </table>
 
       @if (products()?.meta; as pagination) {
-<!--        <ui-pagination [currentPage]="pagination.currentPage"-->
-<!--                       [totalItems]="pagination.totalItems"-->
-<!--                       [itemsPerPage]="pagination.itemsPerPage"-->
-<!--                       [itemCount]="pagination.itemCount"-->
-<!--        ></ui-pagination>-->
         <ui-pagination
                        [totalItems]="pagination.totalItems"
                        [itemsPerPage]="pagination.itemsPerPage"
                        [itemCount]="pagination.itemCount"
+                       (change)="onPaginate($event)"
         ></ui-pagination>
       }
     </div>
