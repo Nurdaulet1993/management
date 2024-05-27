@@ -7,7 +7,11 @@ export const PRODUCTS_ROUTES: Routes = [
     component: ProductsComponent
   },
   {
-    path: ':id',
+    path: ':id/edit',
+    loadComponent: () => import('./product-edit/product-edit.component').then(c => c.ProductEditComponent)
+  },
+  {
+    path: 'add',
     loadComponent: () => import('./product-edit/product-edit.component').then(c => c.ProductEditComponent)
   }
 ]

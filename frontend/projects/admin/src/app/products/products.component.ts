@@ -1,10 +1,10 @@
-import {ChangeDetectionStrategy, Component, inject, signal} from '@angular/core';
-import {ProductService} from 'core';
-import {toSignal} from '@angular/core/rxjs-interop';
-import {AsyncPipe, DatePipe} from '@angular/common';
-import {PaginationComponent} from 'ui';
-import {ActivatedRoute, Router} from '@angular/router';
-import {switchMap} from 'rxjs';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { ProductService } from 'core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { AsyncPipe, DatePipe } from '@angular/common';
+import { PaginationComponent } from 'ui';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-products',
@@ -12,7 +12,8 @@ import {switchMap} from 'rxjs';
   imports: [
     DatePipe,
     PaginationComponent,
-    AsyncPipe
+    AsyncPipe,
+    RouterLink
   ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss',
