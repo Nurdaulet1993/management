@@ -7,7 +7,7 @@
         "./dist/core",
         "./dist/core/*"
       ],
-      "ui-library": [
+      "ui": [
         "./dist/ui-library",
         "./dist/ui-library/*"
       ]

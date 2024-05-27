@@ -4,6 +4,14 @@
   </h4>
   <div class="card rounded-1">
     <div class="card-body">
+      <div class="row mb-3">
+        <div class="col-sm-5">
+          <button class="btn btn-primary rounded-1">
+            <i class="bi bi-plus-circle me-2"></i>
+            Add Product
+          </button>
+        </div>
+      </div>
       <table class="table table-borderless table-hover">
         <thead>
           <tr>
@@ -38,6 +46,19 @@
           }
         </tbody>
       </table>
+
+      @if (products()?.meta; as pagination) {
+<!--        <ui-pagination [currentPage]="pagination.currentPage"-->
+<!--                       [totalItems]="pagination.totalItems"-->
+<!--                       [itemsPerPage]="pagination.itemsPerPage"-->
+<!--                       [itemCount]="pagination.itemCount"-->
+<!--        ></ui-pagination>-->
+        <ui-pagination
+                       [totalItems]="pagination.totalItems"
+                       [itemsPerPage]="pagination.itemsPerPage"
+                       [itemCount]="pagination.itemCount"
+        ></ui-pagination>
+      }
     </div>
   </div>
 </div>

@@ -1,0 +1,50 @@
+<nav>
+  <ul class="pagination justify-content-end">
+
+    <li class="page-item" [class.disabled]="currentPage() === 1">
+      <a class="page-link rounded-1" (click)="onPrevPage()">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             width="24" height="24"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             class="feather feather-chevron-left"
+        >
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </a>
+    </li>
+
+    @for (page of pages(); track page) {
+      <li class="page-item">
+        <a class="page-link rounded-1"
+           [class.active]="currentPage() === page"
+           (click)="setPage(page)"
+        >
+          {{ page }}
+        </a>
+      </li>
+    }
+
+    <li class="page-item">
+      <a class="page-link rounded-1" [class.disabled]="currentPage() === pagesCount()" (click)="onNextPage()">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             width="24" height="24"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             class="feather feather-chevron-right"
+        >
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </a>
+    </li>
+
+  </ul>
+</nav>

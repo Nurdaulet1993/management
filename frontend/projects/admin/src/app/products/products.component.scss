@@ -1,7 +1,6 @@
 $primary: var(--bs-primary);
 
 th, td {
-  //padding: 15px;
   vertical-align: middle;
 }
 
@@ -13,4 +12,8 @@ img {
   height: 2.5rem;
   line-height: 2.5rem;
   width: 2.5rem;
+}
+
+thead th {
+  background-color: #eff4fb; // Fix color
 }
