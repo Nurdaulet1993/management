@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0729a86c-2f93-41ee-bb13-6eb0b146992e" name="Changes" comment="Layout start">
+    <list default="true" id="0729a86c-2f93-41ee-bb13-6eb0b146992e" name="Changes" comment="Products">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7d99ec91-6ded-4d05-b425-bb915ece2e7a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7d99ec91-6ded-4d05-b425-bb915ece2e7a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/management.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/header/header.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/header/header.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/header/header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/layout.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/layout.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/layout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/layout.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/scss/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/sidebar/sidebar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/sidebar/sidebar.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/sidebar/sidebar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/sidebar/sidebar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +17,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="TypeScript File" />
         <option value="SCSS File" />
       </list>
     </option>
@@ -52,32 +44,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/nurdauletsatbergen/Desktop/Pet projects/management/frontend/projects/app/src/app",
-    "list.type.of.created.stylesheet": "SCSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "ts.external.directory.path": "/Users/nurdauletsatbergen/Desktop/Pet projects/management/frontend/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;products&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nurdauletsatbergen/Desktop/Pet projects/management/frontend/projects/app/src/app&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/nurdauletsatbergen/Desktop/Pet projects/management/frontend/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/projects/app/src/app" />
@@ -93,6 +85,8 @@
       <option name="presentableId" value="Default" />
       <updated>1716576201842</updated>
       <workItem from="1716576202891" duration="2611000" />
+      <workItem from="1716761695261" duration="20573000" />
+      <workItem from="1716825197977" duration="6154000" />
     </task>
     <task id="LOCAL-00001" summary="idea">
       <option name="closed" value="true" />
@@ -166,7 +160,127 @@
       <option name="project" value="LOCAL" />
       <updated>1716595577382</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Page not found">
+      <option name="closed" value="true" />
+      <created>1716598711135</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1716598711135</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Change detection">
+      <option name="closed" value="true" />
+      <created>1716598824456</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1716598824456</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Navigation simple">
+      <option name="closed" value="true" />
+      <created>1716603083287</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1716603083287</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Products crud init">
+      <option name="closed" value="true" />
+      <created>1716603845926</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1716603845926</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Products create">
+      <option name="closed" value="true" />
+      <created>1716606493941</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1716606493941</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Products create">
+      <option name="closed" value="true" />
+      <created>1716607940451</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1716607940451</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Products get">
+      <option name="closed" value="true" />
+      <created>1716609524782</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1716609524782</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Products get">
+      <option name="closed" value="true" />
+      <created>1716610463661</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1716610463661</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Products get">
+      <option name="closed" value="true" />
+      <created>1716610810950</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1716610810950</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Products table">
+      <option name="closed" value="true" />
+      <created>1716774800902</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1716774800902</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Simple pagination component">
+      <option name="closed" value="true" />
+      <created>1716785776092</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1716785776092</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Simple pagination component">
+      <option name="closed" value="true" />
+      <created>1716786105817</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1716786105817</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Products">
+      <option name="closed" value="true" />
+      <created>1716833348593</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1716833348593</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Products">
+      <option name="closed" value="true" />
+      <created>1716833773760</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1716833773760</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Products">
+      <option name="closed" value="true" />
+      <created>1716834100263</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1716834100263</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,7 +293,16 @@
     <MESSAGE value="Upgrade admin application" />
     <MESSAGE value="Fix environment" />
     <MESSAGE value="Layout start" />
-    <option name="LAST_COMMIT_MESSAGE" value="Layout start" />
+    <MESSAGE value="Page not found" />
+    <MESSAGE value="Change detection" />
+    <MESSAGE value="Navigation simple" />
+    <MESSAGE value="Products crud init" />
+    <MESSAGE value="Products create" />
+    <MESSAGE value="Products get" />
+    <MESSAGE value="Products table" />
+    <MESSAGE value="Simple pagination component" />
+    <MESSAGE value="Products" />
+    <option name="LAST_COMMIT_MESSAGE" value="Products" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
