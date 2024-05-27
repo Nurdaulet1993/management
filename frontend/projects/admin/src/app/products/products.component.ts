@@ -2,9 +2,10 @@ import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/cor
 import { ProductService } from 'core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { AsyncPipe, DatePipe } from '@angular/common';
-import { PaginationComponent } from 'ui';
+import { PaginationComponent, PageService, PageTitleDirective } from 'ui';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { switchMap } from 'rxjs';
+import { BreadcrumbComponent } from 'xng-breadcrumb';
 
 @Component({
   selector: 'app-products',
@@ -13,7 +14,9 @@ import { switchMap } from 'rxjs';
     DatePipe,
     PaginationComponent,
     AsyncPipe,
-    RouterLink
+    RouterLink,
+    BreadcrumbComponent,
+    PageTitleDirective
   ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss',
@@ -23,6 +26,7 @@ export class ProductsComponent {
   private router = inject(Router);
   private route = inject(ActivatedRoute);
   private productService = inject(ProductService);
+  private pageService = inject(PageService);
   currentPage = signal(1);
   itemsPerPage = signal(4);
 
