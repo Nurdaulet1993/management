@@ -1,0 +1,16 @@
+$primary: var(--bs-primary);
+
+th, td {
+  //padding: 15px;
+  vertical-align: middle;
+}
+
+th {
+  font-weight: 500;
+}
+
+img {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  width: 2.5rem;
+}

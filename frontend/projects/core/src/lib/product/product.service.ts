@@ -13,7 +13,7 @@ export class ProductService {
   private config = inject(CONFIG);
   private endpoint = this.config.isAdmin ? `${this.config.apiUrl}/admin/products` : `${this.config.apiUrl}/products`;
 
-  create(product: Omit<Product, 'id'>) {
+  create(product: Partial<Product>) {
     return this.http.post(this.endpoint, product);
   }
 

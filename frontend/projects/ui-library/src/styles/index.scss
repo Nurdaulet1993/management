@@ -155,8 +155,22 @@ $body-color:                $gray-600;
 $box-shadow:    0px 0px 40px rgba(29, 58, 83, .15);
 $box-shadow-sm: 0 .125rem .25rem rgba(29, 58, 83, .15);
 $box-shadow-lg: 0 1rem 3rem rgba(29, 58, 83, .15);
+$border-color:              var(--#{$prefix}gray-200);
 // -- Components end --
+
+// -- Cards start --
+$card-border-color: var(--#{$prefix}border-color);
+// -- Cards end --
 
 // -- Forms start --
 $input-focus-box-shadow: none;
 // -- Forms end --
+
+
+// --Table start --
+$table-cell-padding-y: 1rem;
+$table-cell-padding-x: 1rem;
+$table-color: var(--#{$prefix}gray-600);
+$table-hover-bg-factor:       .075;
+$table-hover-bg:              rgba($primary, $table-hover-bg-factor);
+// --Table end --
