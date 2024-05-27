@@ -1,11 +1,19 @@
-import {ChangeDetectionStrategy, Component, computed, Input, input, numberAttribute, signal} from '@angular/core';
-import { NgxPaginationModule } from 'ngx-pagination';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  computed,
+  Input,
+  input,
+  numberAttribute,
+  output,
+  signal
+} from '@angular/core';
 import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'ui-pagination',
   standalone: true,
-  imports: [NgxPaginationModule, JsonPipe],
+  imports: [JsonPipe],
   templateUrl: './pagination.component.html',
   styleUrl: './pagination.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -22,8 +30,11 @@ export class PaginationComponent {
   pagesCount = computed(() => Math.ceil(this.totalItems() / this.itemsPerPage()));
   pages = computed(() => this.range(1, this.pagesCount()));
 
+  change = output<number>();
+
   setPage(page: number): void {
     this.currentPage.set(page);
+    this.change.emit(this.currentPage());
   }
 
   range(start: number, end: number): number[] {
@@ -32,9 +43,11 @@ export class PaginationComponent {
 
   onNextPage(): void {
     this.currentPage.update(value => value + 1);
+    this.change.emit(this.currentPage());
   };
 
   onPrevPage(): void {
     this.currentPage.update(value => value - 1);
+    this.change.emit(this.currentPage());
   };
 }
