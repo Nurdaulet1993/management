@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { ProductService } from 'core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { AsyncPipe, DatePipe } from '@angular/common';
+import {AsyncPipe, CurrencyPipe, DatePipe, TitleCasePipe} from '@angular/common';
 import { PaginationComponent, PageService, PageTitleDirective } from 'ui';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { switchMap } from 'rxjs';
@@ -16,7 +16,9 @@ import { BreadcrumbComponent } from 'xng-breadcrumb';
     AsyncPipe,
     RouterLink,
     BreadcrumbComponent,
-    PageTitleDirective
+    PageTitleDirective,
+    CurrencyPipe,
+    TitleCasePipe
   ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss',

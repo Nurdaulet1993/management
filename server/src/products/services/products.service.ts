@@ -7,6 +7,7 @@ import { UserEntity } from '../../user/entities/user.entity';
 import { GetProductsDto } from '../dto/get-products.dto';
 import { paginate } from 'nestjs-typeorm-paginate';
 import { CategoriesService } from '../../categories/categories.service';
+import {CategoryEntity} from '../../categories/entities/category.entity';
 
 @Injectable()
 export class ProductsService {
@@ -23,9 +24,13 @@ export class ProductsService {
     return this.productRepo.save(product)
   }
 
-  findAll({ status, page, limit }: GetProductsDto) {
-    const queryBuilder = this.productRepo.createQueryBuilder('p');
+  findAll({ status, page, limit, categoryIds }: GetProductsDto) {
+    const queryBuilder = this.productRepo.createQueryBuilder('p')
+      .leftJoinAndSelect('p.category', 'category');
     if (status) queryBuilder.where('status = :status', { status });
+    if (categoryIds && categoryIds.length > 0) queryBuilder.where(
+      'category.id IN (:...categoryIds)', { categoryIds }
+    );
     return paginate(queryBuilder, { page, limit });
   }
 

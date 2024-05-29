@@ -18,11 +18,13 @@
             <th scope="col">
               <input class="form-check-input" type="checkbox" value="">
             </th>
-            <th scope="col">Image</th>
-            <th scope="col">Product Name</th>
-            <th scope="col">Description</th>
-            <th scope="col">Status</th>
-            <th scope="col">Create at</th>
+            <th scope="col">IMAGE</th>
+            <th scope="col">PRODUCT NAME</th>
+            <th scope="col">DESCRIPTION</th>
+            <th scope="col">CATEGORY NAME</th>
+            <th scope="col">PRICE</th>
+            <th scope="col">STATUS</th>
+            <th scope="col">CREATED AT</th>
             <th scope="col"></th>
           </tr>
         </thead>
@@ -37,7 +39,11 @@
               </td>
               <td>{{ product.title }}</td>
               <td>{{ product.description }}</td>
-              <td>{{ product.status }}</td>
+              <td>{{ product.category.title | titlecase }}</td>
+              <td>{{ product.price | currency }}</td>
+              <td>
+                <span class="badge text-bg-success text-white">{{ product.status | titlecase }}</span>
+              </td>
               <td>{{ product.createdOn | date: 'MMM d, y, h:mm:ss'}}</td>
               <td>
                 <i class="bi bi-three-dots-vertical"></i>

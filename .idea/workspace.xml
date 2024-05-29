@@ -4,32 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0729a86c-2f93-41ee-bb13-6eb0b146992e" name="Changes" comment="Layout change">
-      <change afterPath="$PROJECT_DIR$/server/src/categories/category.providers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7d99ec91-6ded-4d05-b425-bb915ece2e7a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7d99ec91-6ded-4d05-b425-bb915ece2e7a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7d99ec91-6ded-4d05-b425-bb915ece2e7a/storage_v2/_src_/database/management.Q3i2lA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7d99ec91-6ded-4d05-b425-bb915ece2e7a/storage_v2/_src_/database/management.Q3i2lA/schema/public.abK9xQ.meta" afterDir="false" />
+    <list default="true" id="0729a86c-2f93-41ee-bb13-6eb0b146992e" name="Changes" comment="Categories">
+      <change afterPath="$PROJECT_DIR$/frontend/projects/core/src/lib/auth/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/projects/core/src/lib/category/category.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/projects/core/src/lib/category/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/projects/core/src/lib/product/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/projects/core/src/lib/user/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/app.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/app.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/dashboard/dashboard.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/dashboard/dashboard.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/products/product-edit/product-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/products/product-edit/product-edit.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/products/product-edit/product-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/products/product-edit/product-edit.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/products/products.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/products/products.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/ui-library/src/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/ui-library/src/styles/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/products/dto/create-product.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/products/dto/create-product.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/products/entities/product.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/products/entities/product.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/products/products.controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/products/controllers/products.controller.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/products/products.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/products/controllers/products.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/products/products.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/products/products.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/products/products.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/products/services/products.service.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/products/products.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/products/services/products.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/products/products.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/products/products.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/projects/core/src/lib/product/product.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/core/src/lib/product/product.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/projects/core/src/lib/product/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/core/src/lib/product/product.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/projects/core/src/public-api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/core/src/public-api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/categories/categories.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/categories/categories.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/products/dto/get-products.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/products/dto/get-products.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/products/services/products.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/products/services/products.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +105,7 @@
       <workItem from="1716576202891" duration="2611000" />
       <workItem from="1716761695261" duration="20573000" />
       <workItem from="1716825197977" duration="6154000" />
-      <workItem from="1716867166825" duration="19091000" />
+      <workItem from="1716867166825" duration="25826000" />
     </task>
     <task id="LOCAL-00001" summary="idea">
       <option name="closed" value="true" />
@@ -316,7 +307,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716848868522</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Categories">
+      <option name="closed" value="true" />
+      <created>1717019344697</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1717019344697</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +338,8 @@
     <MESSAGE value="Simple pagination component" />
     <MESSAGE value="Products" />
     <MESSAGE value="Page header" />
-    <option name="LAST_COMMIT_MESSAGE" value="Page header" />
+    <MESSAGE value="Categories" />
+    <option name="LAST_COMMIT_MESSAGE" value="Categories" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

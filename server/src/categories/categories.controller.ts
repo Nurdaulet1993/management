@@ -14,6 +14,7 @@ export class CategoriesController {
     return this.categoriesService.create(createCategoryDto);
   }
 
+  @Public()
   @Get()
   findAll() {
     return this.categoriesService.findAll();

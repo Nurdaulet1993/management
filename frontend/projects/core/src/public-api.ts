@@ -1,17 +1,16 @@
 export * from './lib/core.module';
 
 // User
-export * from './lib/user/user.model';
-export * from './lib/user/user-api.service';
+export * from './lib/user';
 
 // Auth
-export * from './lib/auth/auth.service';
-export * from './lib/auth/auth.model';
-export * from './lib/auth/auth.interceptor';
+export * from './lib/auth';
 
 // Services
 export * from './lib/services';
 
 // Product
-export * from './lib/product/product.model';
-export * from './lib/product/product.service';
+export * from './lib/product';
+
+// Category
+export * from './lib/category';

@@ -1,4 +1,4 @@
-import {IsNumber, IsOptional, IsString} from 'class-validator';
+import {IsArray, IsNumber, IsOptional, IsString} from 'class-validator';
 import {Transform} from 'class-transformer';
 
 export class GetProductsDto {
@@ -15,6 +15,10 @@ export class GetProductsDto {
   @IsNumber()
   @IsOptional()
   limit: number;
+
+  @IsArray()
+  @IsOptional()
+  categoryIds: number[]
 
 
   // Add more query fields then
