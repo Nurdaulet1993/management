@@ -9,6 +9,10 @@ import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { environment } from '../environments/environment';
 
 import { CoreModule, authInterceptor } from 'core';
+import { provideQuillConfig } from 'ngx-quill';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import * as hljs from 'highlight.js';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -19,7 +23,34 @@ export const appConfig: ApplicationConfig = {
       CoreModule.forRoot({
         isAdmin: true,
         apiUrl: environment.apiUrl
-      })
-    ])
+      }),
+      BrowserAnimationsModule
+    ]),
+    provideQuillConfig({
+      modules: {
+        syntax: { hljs },
+        toolbar: [
+          ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+          ['blockquote', 'code-block'],
+
+          [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+          [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+          [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+          [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+          [{ 'direction': 'rtl' }],                         // text direction
+
+          [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
+          [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+
+          [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+          [{ 'font': [] }],
+          [{ 'align': [] }],
+
+          ['clean'],                                         // remove formatting button
+
+          ['link', 'image', 'video']                         // link and image, video
+        ]
+      }
+    })
   ]
 };

@@ -32,6 +32,7 @@
               }
             ],
             "styles": [
+              "node_modules/highlight.js/styles/default.css",
               "projects/app/src/styles.scss"
             ],
             "stylePreprocessorOptions": {
@@ -39,7 +40,9 @@
                 "dist/ui-library/styles"
               ]
             },
-            "scripts": []
+            "scripts": [
+              "node_modules/highlight.js/lib/highlight.js"
+            ]
           },
           "configurations": {
             "production": {

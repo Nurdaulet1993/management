@@ -4,12 +4,51 @@
   </h4>
 </ng-template>
 
-<div class="card rounded-1">
-  <div class="card-body">
-    Lorem ipsum dolor sit amet,<br>
-    consectetur adipisicing elit.<br>
-    Alias autem consequatur ea ex minus,
-    necessitatibus odio odit perspiciatis quibusdam ratione!
-  </div>
+<form [formGroup]="form" class="row">
+  <div class="col-lg-8">
+    <div class="card shadow">
+      <div class="card-body">
+        <h4 class="h5 mb-4 fw-light">Product Information</h4>
 
-</div>
+        <div class="row">
+          <div class="mb-3 col-lg-6">
+            <label class="form-label">Title</label>
+            <input type="text" class="form-control" placeholder="Product Name" formControlName="title">
+          </div>
+          <div class="mb-3 col-lg-6">
+            <label class="form-label">Product Category</label>
+            <select class="form-select" aria-label="Default select example">
+              <option>Product Category</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <div class="mb-3 col-lg-12">
+            <label class="form-label">Description</label>
+            <quill-editor style="height: 200px" formControlName="description"></quill-editor>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-end">
+          <button class="btn btn-success text-white rounded-1">Create Product</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <h4 class="mb-4 h5 fw-light">Product Price</h4>
+        <div class="mb-3">
+          <label class="form-label">Regular Price</label>
+          <input type="text" class="form-control" placeholder="$0.00">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Sale Price</label>
+          <input type="text" class="form-control" placeholder="$0.00">
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

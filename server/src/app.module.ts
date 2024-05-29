@@ -6,6 +6,7 @@ import * as process from 'process';
 import {APP_GUARD} from '@nestjs/core';
 import {JwtAuthGuard} from './auth/guards/jwt.guard';
 import { ProductsModule } from './products/products.module';
+import { CategoriesModule } from './categories/categories.module';
 
 @Module({
   imports: [
@@ -15,7 +16,8 @@ import { ProductsModule } from './products/products.module';
     }),
     AuthModule,
     UserModule,
-    ProductsModule
+    ProductsModule,
+    CategoriesModule
   ],
   providers: [
     {

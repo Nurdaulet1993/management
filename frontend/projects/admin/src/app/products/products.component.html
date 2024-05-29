@@ -1,7 +1,5 @@
 <ng-template ui-page-title>
-  <h4 class="page-title m-0">
-    Products
-  </h4>
+  <h4 class="page-title m-0">Products</h4>
 </ng-template>
 
 <div class="card rounded-1">
@@ -22,8 +20,8 @@
             </th>
             <th scope="col">Image</th>
             <th scope="col">Product Name</th>
-            <th scope="col">Status</th>
             <th scope="col">Description</th>
+            <th scope="col">Status</th>
             <th scope="col">Create at</th>
             <th scope="col"></th>
           </tr>
@@ -44,6 +42,13 @@
               <td>
                 <i class="bi bi-three-dots-vertical"></i>
               </td>
+            </tr>
+          } @empty {
+            <tr>
+              <td colspan="6">
+                <p class="text-muted text-center m-0">There is no products</p>
+              </td>
+
             </tr>
           }
         </tbody>

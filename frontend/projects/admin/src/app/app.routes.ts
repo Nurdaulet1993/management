@@ -18,7 +18,10 @@ export const routes: Routes = [
       },
       {
         path: 'dashboard',
-        loadComponent: () => import('./dashboard/dashboard.component').then(c => c.DashboardComponent)
+        loadComponent: () => import('./dashboard/dashboard.component').then(c => c.DashboardComponent),
+        data: {
+          breadcrumb: 'Dashboard'
+        }
       },
       {
         path: 'products',
