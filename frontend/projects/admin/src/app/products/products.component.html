@@ -13,9 +13,11 @@
       </div>
     </div>
     @if (products(); as products) {
-      <app-products-table [products]="products.items" (deleteProduct)="deleteProduct($event)"></app-products-table>
+      <app-products-table [products]="products.items"
+                          (deleteProduct)="deleteProduct($event)"
+      >
+      </app-products-table>
     }
-
 
     @if (products()?.meta; as pagination) {
       <ui-pagination
@@ -23,6 +25,7 @@
                      [itemsPerPage]="pagination.itemsPerPage"
                      [itemCount]="pagination.itemCount"
                      (change)="onPaginate($event)"
+                     [currentPage]="pagination.currentPage"
       ></ui-pagination>
     }
   </div>

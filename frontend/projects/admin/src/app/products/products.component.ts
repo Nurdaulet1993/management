@@ -36,7 +36,7 @@ export class ProductsComponent {
 
   products$ = this.route.queryParams
     .pipe(
-      switchMap(filters => this.productService.getProducts({...filters }))
+      switchMap(filters => this.productService.getProducts(filters))
     )
 
   products: Signal<Paginated<Product> | undefined> = toSignal(

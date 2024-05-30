@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0729a86c-2f93-41ee-bb13-6eb0b146992e" name="Changes" comment="Add toastr">
+    <list default="true" id="0729a86c-2f93-41ee-bb13-6eb0b146992e" name="Changes" comment="Products table">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/layout.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/layout.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/products/product-edit/product-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/products/product-edit/product-edit.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/products/products.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/products/products.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/products/products.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/products/products.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/core/src/lib/product/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/core/src/lib/product/product.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/core/src/public-api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/core/src/public-api.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +92,7 @@
       <workItem from="1716576202891" duration="2611000" />
       <workItem from="1716761695261" duration="20573000" />
       <workItem from="1716825197977" duration="6154000" />
-      <workItem from="1716867166825" duration="40641000" />
+      <workItem from="1716867166825" duration="41254000" />
     </task>
     <task id="LOCAL-00001" summary="idea">
       <option name="closed" value="true" />
@@ -338,7 +334,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717041087037</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Products table">
+      <option name="closed" value="true" />
+      <created>1717048701896</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1717048701896</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,14 +361,14 @@
     <MESSAGE value="Products crud init" />
     <MESSAGE value="Products create" />
     <MESSAGE value="Products get" />
-    <MESSAGE value="Products table" />
     <MESSAGE value="Simple pagination component" />
     <MESSAGE value="Products" />
     <MESSAGE value="Page header" />
     <MESSAGE value="Categories" />
     <MESSAGE value="Remove product" />
     <MESSAGE value="Add toastr" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add toastr" />
+    <MESSAGE value="Products table" />
+    <option name="LAST_COMMIT_MESSAGE" value="Products table" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
