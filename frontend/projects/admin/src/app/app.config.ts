@@ -4,14 +4,14 @@ import {
   provideZoneChangeDetection
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import { routes } from './app.routes';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-browser/animations';
 import { environment } from '../environments/environment';
+import { routes } from './app.routes';
 
 import { CoreModule, authInterceptor } from 'core';
 import { provideQuillConfig } from 'ngx-quill';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { provideToastr } from 'ngx-toastr';
 import * as hljs from 'highlight.js';
 
 export const appConfig: ApplicationConfig = {
@@ -51,6 +51,8 @@ export const appConfig: ApplicationConfig = {
           ['link', 'image', 'video']                         // link and image, video
         ]
       }
-    })
+    }),
+    provideAnimations(),
+    provideToastr()
   ]
 };

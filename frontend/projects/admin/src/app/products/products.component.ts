@@ -7,6 +7,7 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { switchMap, withLatestFrom, merge, tap, filter } from 'rxjs';
 import { BreadcrumbComponent } from 'xng-breadcrumb';
 import { CdkMenu, CdkMenuItem, CdkMenuTrigger } from '@angular/cdk/menu';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-products',
@@ -30,6 +31,7 @@ export class ProductsComponent {
   private router = inject(Router);
   private route = inject(ActivatedRoute);
   private productService = inject(ProductService);
+  private toastrService = inject(ToastrService);
   currentPage = signal(1);
   itemsPerPage = signal(4);
   productDeletedId = signal<number | null>(null);
@@ -66,6 +68,13 @@ export class ProductsComponent {
 
   deleteProduct(id: number) {
     this.productService.deleteProduct(id)
-      .subscribe(product => this.productDeletedId.set(id))
+      .subscribe(product => {
+        this.productDeletedId.set(id);
+        this.toastrService.success(
+          `Product with ID ${id} deleted successfully!`,
+          'Delete Success',
+          { timeOut: 1000 }
+        )
+      })
   }
 }
