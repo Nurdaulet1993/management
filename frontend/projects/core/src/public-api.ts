@@ -14,3 +14,5 @@ export * from './lib/product';
 
 // Category
 export * from './lib/category';
+
+export * from './lib/models/pagination.model';

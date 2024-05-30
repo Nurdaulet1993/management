@@ -1,11 +1,12 @@
-import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
-import { RouterLink} from '@angular/router';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { BreadcrumbComponent } from 'xng-breadcrumb';
 import { PageTitleDirective } from 'ui';
 import { QuillEditorComponent } from 'ngx-quill';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CategoryService, ProductService } from 'core';
 import { TitleCasePipe } from '@angular/common';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-product-edit',
@@ -22,9 +23,12 @@ import { TitleCasePipe } from '@angular/common';
   styleUrl: './product-edit.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ProductEditComponent implements OnInit {
+export class ProductEditComponent {
+  private router = inject(Router);
+  private route = inject(ActivatedRoute);
   private categoryService = inject(CategoryService);
   private productService = inject(ProductService);
+  private toastrService = inject(ToastrService);
   private fb = inject(FormBuilder);
   categories = this.categoryService.categories;
 
@@ -35,19 +39,14 @@ export class ProductEditComponent implements OnInit {
     categoryId: this.fb.nonNullable.control('', [Validators.required])
   })
 
-  ngOnInit(): void {
-
-  }
-
   saveProduct() {
     if (this.form.invalid) return;
     const { title, description, price, categoryId } = this.form.getRawValue();
 
-    this.productService.create({ title, description, price: +price, categoryId: +categoryId})
-      .subscribe(
-        product => {
-          console.log(product)
-        }
-      )
+    this.productService.create({ title, description, price: +price, categoryId: +categoryId })
+      .subscribe(product => {
+        this.toastrService.success(`${product.title} added successfully!`, '', { timeOut: 1000 });
+        this.router.navigate(['../'], { queryParamsHandling: 'merge', relativeTo: this.route });
+      })
   }
 }

@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0729a86c-2f93-41ee-bb13-6eb0b146992e" name="Changes" comment="Remove product">
+    <list default="true" id="0729a86c-2f93-41ee-bb13-6eb0b146992e" name="Changes" comment="Add toastr">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/app.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/layout.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/layout/layout.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/products/product-edit/product-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/products/product-edit/product-edit.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/products/products.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/products/products.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/products/products.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/products/products.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/projects/core/src/lib/product/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/core/src/lib/product/product.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/projects/core/src/public-api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/core/src/public-api.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +96,7 @@
       <workItem from="1716576202891" duration="2611000" />
       <workItem from="1716761695261" duration="20573000" />
       <workItem from="1716825197977" duration="6154000" />
-      <workItem from="1716867166825" duration="37142000" />
+      <workItem from="1716867166825" duration="40641000" />
     </task>
     <task id="LOCAL-00001" summary="idea">
       <option name="closed" value="true" />
@@ -329,7 +330,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717038632386</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Add toastr">
+      <option name="closed" value="true" />
+      <created>1717041087037</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1717041087037</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,7 +363,8 @@
     <MESSAGE value="Page header" />
     <MESSAGE value="Categories" />
     <MESSAGE value="Remove product" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove product" />
+    <MESSAGE value="Add toastr" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add toastr" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

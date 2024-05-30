@@ -1,13 +1,13 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
-import { ProductService } from 'core';
+import { ChangeDetectionStrategy, Component, inject, Signal, signal } from '@angular/core';
+import { ProductService, Paginated, Product } from 'core';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
-import { AsyncPipe, CurrencyPipe, DatePipe, TitleCasePipe} from '@angular/common';
+import { AsyncPipe, DatePipe } from '@angular/common';
 import { PaginationComponent, PageTitleDirective } from 'ui';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { switchMap, withLatestFrom, merge, tap, filter } from 'rxjs';
 import { BreadcrumbComponent } from 'xng-breadcrumb';
-import { CdkMenu, CdkMenuItem, CdkMenuTrigger } from '@angular/cdk/menu';
 import { ToastrService } from 'ngx-toastr';
+import { ProductsTableComponent } from './products-table/products-table.component';
 
 @Component({
   selector: 'app-products',
@@ -19,9 +19,7 @@ import { ToastrService } from 'ngx-toastr';
     RouterLink,
     BreadcrumbComponent,
     PageTitleDirective,
-    CurrencyPipe,
-    TitleCasePipe,
-    CdkMenu, CdkMenuItem, CdkMenuTrigger
+    ProductsTableComponent
   ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss',
@@ -41,7 +39,7 @@ export class ProductsComponent {
       switchMap(filters => this.productService.getProducts({...filters }))
     )
 
-  products = toSignal(
+  products: Signal<Paginated<Product> | undefined> = toSignal(
     merge(
       this.products$,
       toObservable(this.productDeletedId)
