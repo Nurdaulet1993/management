@@ -8,6 +8,7 @@ import { GetProductsDto } from '../dto/get-products.dto';
 import { paginate } from 'nestjs-typeorm-paginate';
 import { CategoriesService } from '../../categories/categories.service';
 import {CategoryEntity} from '../../categories/entities/category.entity';
+import {from, map, switchMap} from 'rxjs';
 
 @Injectable()
 export class ProductsService {
@@ -43,6 +44,13 @@ export class ProductsService {
   }
 
   remove(id: number) {
-    return `This action removes a #${id} product`;
+    return from(this.findOne(id))
+      .pipe(
+        map(task => {
+          if (!task) throw new NotFoundException(`Product wit ID ${id} not found`);
+          return task;
+        }),
+        switchMap(product => this.productRepo.remove(product))
+      )
   }
 }

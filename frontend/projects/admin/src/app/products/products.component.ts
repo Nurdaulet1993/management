@@ -1,11 +1,13 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { ProductService } from 'core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import {AsyncPipe, CurrencyPipe, DatePipe, TitleCasePipe} from '@angular/common';
+import { AsyncPipe, CurrencyPipe, DatePipe, TitleCasePipe} from '@angular/common';
 import { PaginationComponent, PageService, PageTitleDirective } from 'ui';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { switchMap } from 'rxjs';
 import { BreadcrumbComponent } from 'xng-breadcrumb';
+import {CdkMenu, CdkMenuItem, CdkMenuModule, CdkMenuTrigger} from '@angular/cdk/menu';
+import {CdkOverlayOrigin} from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-products',
@@ -18,7 +20,8 @@ import { BreadcrumbComponent } from 'xng-breadcrumb';
     BreadcrumbComponent,
     PageTitleDirective,
     CurrencyPipe,
-    TitleCasePipe
+    TitleCasePipe,
+    CdkMenu, CdkMenuItem, CdkMenuTrigger
   ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss',
@@ -41,5 +44,9 @@ export class ProductsComponent {
 
   onPaginate(page: number) {
     this.router.navigate([], { queryParams: { page }, queryParamsHandling: 'merge' })
+  }
+
+  deleteProduct(id: number) {
+    alert(id);
   }
 }
