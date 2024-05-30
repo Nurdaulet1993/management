@@ -22,4 +22,8 @@ export class ProductService {
       params: { ...filters }
     });
   }
+
+  deleteProduct(id: number): Observable<Omit<Product, "id">> {
+    return this.http.delete<Omit<Product, "id">>(`${this.endpoint}/${id}`);
+  }
 }

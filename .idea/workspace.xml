@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0729a86c-2f93-41ee-bb13-6eb0b146992e" name="Changes" comment="Categories">
+    <list default="true" id="0729a86c-2f93-41ee-bb13-6eb0b146992e" name="Changes" comment="Remove product">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/products/products.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/products/products.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/app/products/products.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/app/products/products.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/projects/admin/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/admin/src/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/products/controllers/products-admin.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/products/controllers/products-admin.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/products/services/products.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/products/services/products.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/projects/core/src/lib/product/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/projects/core/src/lib/product/product.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +93,7 @@
       <workItem from="1716576202891" duration="2611000" />
       <workItem from="1716761695261" duration="20573000" />
       <workItem from="1716825197977" duration="6154000" />
-      <workItem from="1716867166825" duration="27819000" />
+      <workItem from="1716867166825" duration="34638000" />
     </task>
     <task id="LOCAL-00001" summary="idea">
       <option name="closed" value="true" />
@@ -313,7 +311,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717025997413</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Remove product">
+      <option name="closed" value="true" />
+      <created>1717028026901</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1717028026901</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,7 +343,8 @@
     <MESSAGE value="Products" />
     <MESSAGE value="Page header" />
     <MESSAGE value="Categories" />
-    <option name="LAST_COMMIT_MESSAGE" value="Categories" />
+    <MESSAGE value="Remove product" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove product" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
