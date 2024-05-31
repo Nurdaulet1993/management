@@ -9,6 +9,7 @@
   min-height: v.$header-height;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 :host-context(.open) {

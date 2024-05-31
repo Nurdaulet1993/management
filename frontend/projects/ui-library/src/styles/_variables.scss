@@ -181,5 +181,8 @@ $table-hover-bg-factor:       .075;
 $table-hover-bg:              rgba($primary, $table-hover-bg-factor);
 // -- Table end --
 
-// -- Pagination start --
-// -- Pagination end --
+// -- Dropdown start --
+$dropdown-font-size: 14px;
+$dropdown-item-padding-y: 10px;
+$dropdown-item-padding-x: $spacer;
+// -- Dropdown end --

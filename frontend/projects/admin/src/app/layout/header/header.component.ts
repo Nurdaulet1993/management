@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, Signal } from '@angular/core';
 import { LayoutService } from '../layout.service';
+import { AuthService, CurrentUser } from 'core';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +12,8 @@ import { LayoutService } from '../layout.service';
 })
 export class HeaderComponent {
   private layoutService = inject(LayoutService);
+  private authService = inject(AuthService);
+  user: Signal<CurrentUser | null> = this.authService.currentUser;
 
   toggleSidebar() {
     this.layoutService.toggleSidebar();
