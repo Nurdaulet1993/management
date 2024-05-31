@@ -1,14 +1,13 @@
 import { Inject, Injectable, NotFoundException } from '@nestjs/common';
 import { CreateProductDto } from '../dto/create-product.dto';
 import { UpdateProductDto } from '../dto/update-product.dto';
-import { Repository } from 'typeorm';
+import { Brackets, Repository } from 'typeorm';
 import { ProductEntity } from '../entities/product.entity';
 import { UserEntity } from '../../user/entities/user.entity';
 import { GetProductsDto } from '../dto/get-products.dto';
 import { paginate } from 'nestjs-typeorm-paginate';
 import { CategoriesService } from '../../categories/categories.service';
-import {CategoryEntity} from '../../categories/entities/category.entity';
-import {from, map, switchMap} from 'rxjs';
+import { from, map, switchMap } from 'rxjs';
 
 @Injectable()
 export class ProductsService {
@@ -25,11 +24,23 @@ export class ProductsService {
     return this.productRepo.save(product)
   }
 
-  findAll({ status, page, limit, categoryIds }: GetProductsDto) {
+  findAll({ search, status, page, limit, categoryIds }: GetProductsDto) {
     const queryBuilder = this.productRepo.createQueryBuilder('p')
       .leftJoinAndSelect('p.category', 'category');
-    if (status) queryBuilder.where('status = :status', { status });
-    if (categoryIds && categoryIds.length > 0) queryBuilder.where(
+
+    if (search) {
+      queryBuilder
+        .andWhere(
+          new Brackets((qb) => {
+            qb
+              .where("LOWER(p.title) LIKE :search", { search: `%${search.toLowerCase()}%` })
+              .orWhere("LOWER(p.description) LIKE :search", { search: `%${search.toLowerCase()}%` })
+          })
+        )
+    }
+
+    if (status) queryBuilder.andWhere('status = :status', { status });
+    if (categoryIds && categoryIds.length > 0) queryBuilder.andWhere(
       'category.id IN (:...categoryIds)', { categoryIds }
     );
     return paginate(queryBuilder, { page, limit });

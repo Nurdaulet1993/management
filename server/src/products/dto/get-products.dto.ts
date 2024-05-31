@@ -4,6 +4,10 @@ import {Transform} from 'class-transformer';
 export class GetProductsDto {
   @IsString()
   @IsOptional()
+  search: string;
+
+  @IsString()
+  @IsOptional()
   status :string;
 
   @Transform(({ value }): number => parseInt(value))
@@ -19,6 +23,8 @@ export class GetProductsDto {
   @IsArray()
   @IsOptional()
   categoryIds: number[]
+
+
 
 
   // Add more query fields then
