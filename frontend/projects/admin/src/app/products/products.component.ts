@@ -2,13 +2,13 @@ import { ChangeDetectionStrategy, Component, inject, OnInit, Signal, signal } fr
 import { ProductService, Paginated, Product, CategoryService } from 'core';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { AsyncPipe, DatePipe, TitleCasePipe } from '@angular/common';
-import { PaginationComponent, PageTitleDirective } from 'ui';
+import { PaginationComponent, PageTitleDirective, SearchComponent } from 'ui';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { switchMap, withLatestFrom, merge, tap, filter, debounceTime } from 'rxjs';
 import { BreadcrumbComponent } from 'xng-breadcrumb';
 import { ToastrService } from 'ngx-toastr';
 import { ProductsTableComponent } from './products-table/products-table.component';
-import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-products',
@@ -23,21 +23,19 @@ import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProductsTableComponent,
     FormsModule,
     TitleCasePipe,
-    ReactiveFormsModule
+    SearchComponent
   ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ProductsComponent implements OnInit {
+export class ProductsComponent {
   private router = inject(Router);
   private route = inject(ActivatedRoute);
   private productService = inject(ProductService);
   private toastrService = inject(ToastrService);
   productDeletedId = signal<number | null>(null);
   categories = inject(CategoryService).categories;
-  search = new FormControl<string>(this.route.snapshot.queryParams['search'], { nonNullable: true });
-
   products$ = this.route.queryParams
     .pipe(
       switchMap(filters => this.productService.getProducts(filters))
@@ -63,14 +61,6 @@ export class ProductsComponent implements OnInit {
         )
     )
   );
-
-  ngOnInit(): void {
-    this.search.valueChanges
-      .pipe(debounceTime(1000))
-      .subscribe(search => {
-        this.router.navigate([], { queryParams: { search: search ? search : null }, queryParamsHandling: 'merge' })
-      })
-  }
 
   onPaginate(page: number) {
     this.router.navigate([], { queryParams: { page }, queryParamsHandling: 'merge' })

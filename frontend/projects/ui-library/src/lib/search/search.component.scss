@@ -1,0 +1,16 @@
+:host {
+  position: relative;
+}
+
+.form-control {
+  padding-left: 35px;
+}
+
+.search-icon {
+  align-items: center;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
