@@ -22,9 +22,9 @@
         >
           <i class="bi bi-filter"></i>
         </button>
-        <button routerLink="add"
-                class="btn btn-light rounded-1 me-2"
+        <button class="btn btn-light rounded-1 me-2"
                 data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"
+                (click)="sidebar.open()"
         >
           <i class="bi bi-gear"></i>
         </button>
@@ -54,3 +54,7 @@
     }
   </div>
 </div>
+
+<app-right-sidebar opened #sidebar="rightSidebar">
+  <p>Lorem ipsum dolor sit.</p>
+</app-right-sidebar>

@@ -4,11 +4,13 @@ import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { AsyncPipe, DatePipe, TitleCasePipe } from '@angular/common';
 import { PaginationComponent, PageTitleDirective, SearchComponent } from 'ui';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { switchMap, withLatestFrom, merge, tap, filter, debounceTime } from 'rxjs';
+import { switchMap, withLatestFrom, merge, tap, filter } from 'rxjs';
 import { BreadcrumbComponent } from 'xng-breadcrumb';
 import { ToastrService } from 'ngx-toastr';
 import { ProductsTableComponent } from './products-table/products-table.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { RightSidebarComponent} from '../layout/right-sidebar/right-sidebar.component';
+import { CdkOverlayOrigin } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-products',
@@ -23,7 +25,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProductsTableComponent,
     FormsModule,
     TitleCasePipe,
-    SearchComponent
+    SearchComponent,
+    RightSidebarComponent,
+    CdkOverlayOrigin
   ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss',
@@ -40,6 +44,8 @@ export class ProductsComponent {
     .pipe(
       switchMap(filters => this.productService.getProducts(filters))
     )
+
+  isOpenSidebar = false;
 
   products: Signal<Paginated<Product> | undefined> = toSignal(
     merge(

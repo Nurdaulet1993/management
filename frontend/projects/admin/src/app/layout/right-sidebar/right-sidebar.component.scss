@@ -1,0 +1,12 @@
+@use "../scss/variables" as v;
+
+.sidebar {
+  display: block;
+  width: 100%;
+  background-color: var(--bs-white);
+  margin-top: v.$header-height;
+}
+
+:host {
+  border: 1px solid #ccc;
+}
