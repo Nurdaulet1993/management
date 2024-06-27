@@ -4,9 +4,6 @@
   display: block;
   width: 100%;
   background-color: var(--bs-white);
-  margin-top: v.$header-height;
-}
+  height: 100vh;
 
-:host {
-  border: 1px solid #ccc;
 }

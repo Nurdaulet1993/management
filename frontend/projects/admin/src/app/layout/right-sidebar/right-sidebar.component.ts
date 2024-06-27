@@ -1,10 +1,8 @@
 import {
   booleanAttribute,
   Component,
-  DestroyRef,
   inject,
   input,
-  Input,
   OnInit,
   TemplateRef,
   viewChild,
@@ -32,20 +30,17 @@ export class RightSidebarComponent implements OnInit {
     .global()
     .right()
     .top()
-    .width('300px')
-    .height('100%');
 
   private overlayRef = this.overlay.create({
     positionStrategy: this.positionStrategy,
     hasBackdrop: true,
-    backdropClass: 'cdk-overlay-transparent-backdrop'
   })
 
   backdropClick$ = this.overlayRef.backdropClick()
     .pipe(takeUntilDestroyed())
 
   opened = input(true, { transform: booleanAttribute });
-  isOpen = false;
+  isOpen = this.opened();
 
   ngOnInit(): void {
     if (this.opened()) this.open();
