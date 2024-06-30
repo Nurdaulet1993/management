@@ -34,7 +34,7 @@ import { CdkOverlayOrigin } from '@angular/cdk/overlay';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductsComponent {
-  private router = inject(Router);
+  private router = inject(Router );
   private route = inject(ActivatedRoute);
   private productService = inject(ProductService);
   private toastrService = inject(ToastrService);

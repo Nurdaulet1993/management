@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:admin": "rm -rf ../server/client && mkdir ../server/client && ng build admin && mv dist/admin/* ../server/client/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
